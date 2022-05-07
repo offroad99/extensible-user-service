@@ -28,6 +28,8 @@ async function createUserAsync(req, res) {
                     message: "Username is taken",
                 })
                 .end();
+
+            return;
         }
 
         console.log(e);
