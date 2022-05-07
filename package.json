@@ -1,0 +1,20 @@
+{
+    "name": "user-service",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node app.js",
+        "start:background": "nohup node app.js > output.log 2>&1 & echo $! > save_pid.txt",
+        "stop:background": "node end-process.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@hapi/joi": "^17.1.1",
+        "dotenv": "^16.0.0",
+        "express": "^4.18.1",
+        "mongodb": "^4.5.0"
+    }
+}
