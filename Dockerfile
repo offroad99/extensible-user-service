@@ -6,5 +6,4 @@ RUN npm install
 COPY . /usr/src/app
 EXPOSE 7500
 ENTRYPOINT ["node"]
-
 CMD ["app.js"]
