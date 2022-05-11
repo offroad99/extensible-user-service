@@ -1,3 +1,4 @@
 output.log
 save_pid.js
 node_modules
+data/**
