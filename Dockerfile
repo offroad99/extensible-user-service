@@ -1,9 +1,12 @@
-FROM node:latest
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
-COPY package.json /usr/src/app
+FROM alpine:latest
+RUN apk add -U --no-cache nodejs npm && \
+  adduser -S nodejs
+
+USER nodejs
+WORKDIR /home/nodejs
+COPY package.json .
 RUN npm install
-COPY . /usr/src/app
+COPY . .
 EXPOSE 7500
 ENTRYPOINT ["node"]
 CMD ["app.js"]
