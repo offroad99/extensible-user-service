@@ -13,6 +13,6 @@ services:
         container_name: mongo
         image: mongo
         volumes:
-            - ./data:/data/db
+            - ./data:/data
         ports:
             - "27018:27017"
